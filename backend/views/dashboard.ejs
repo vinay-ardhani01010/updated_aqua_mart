@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aqua-Mart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/swipercss.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <style>
+     .ghost-button2 {
+        display: inline-block;
+        width: 150px;
+        padding: 8px;
+        color:black;
+        border: 1.5px solid black;
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+      }
+      .ghost-button2:hover,
+      .ghost-button2:active {
+        background-color: rgb(62, 123, 202);
+        color:white;
+        text-decoration: none;
+        border: 1.5px solid white;
+      }
+      body {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+ 
+      }
+      .card--featured{
+        cursor: pointer;
+      }
+      footer{
+ 
+        bottom: 0;
+        }
+        .footer-distributed{
+        background-color: #292c2f;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font: bold 16px sans-serif;
+ 
+        padding: 55px 50px;
+        margin-top: 80px;
+        }
+ 
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right{
+        display: inline-block;
+        vertical-align: top;
+        }
+ 
+        .footer-distributed .footer-left{
+        width: 40%;
+        }
+ 
+        .footer-distributed h3{
+        color:  #ffffff;
+        font: normal 36px 'Cookie', cursive;
+        margin: 0;
+        }
+ 
+        .footer-distributed h3 span{
+        color:  #5383d3;
+        }
+ 
+ 
+        .footer-distributed .footer-links{
+        color:  #ffffff;
+        margin: 20px 0 12px;
+        padding: 0;
+        }
+ 
+        .footer-distributed .footer-links a{
+        display:inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color:  inherit;
+        }
+ 
+        .footer-distributed .footer-company-name{
+        color:  #8f9296;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        }
+ 
+ 
+        .footer-distributed .footer-center{
+        width: 35%;
+        }
+ 
+        .footer-distributed .footer-center i{
+        background-color:  #33383b;
+        color: #ffffff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+        }
+ 
+        .footer-distributed .footer-center i.fa-envelope{
+        font-size: 17px;
+        line-height: 38px;
+        }
+ 
+        .footer-distributed .footer-center p{
+        display: inline-block;
+        color: #ffffff;
+        vertical-align: middle;
+        margin:0;
+        }
+ 
+        .footer-distributed .footer-center p span{
+        display:block;
+        font-weight: normal;
+        font-size:14px;
+        line-height:2;
+        }
+ 
+        .footer-distributed .footer-center p a{
+        color:  #5383d3;
+        text-decoration: none;;
+        }
+ 
+        .footer-distributed .footer-right{
+        width: 20%;
+        }
+ 
+        .footer-distributed .footer-company-about{
+        line-height: 20px;
+        color:  #92999f;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+        }
+ 
+        .footer-distributed .footer-company-about span{
+        display: block;
+        color:  #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        }
+ 
+        .footer-distributed .footer-icons{
+        margin-top: 25px;
+        }
+ 
+        .footer-distributed .footer-icons a{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color:  #33383b;
+        border-radius: 2px;
+ 
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+ 
+        margin-right: 3px;
+        margin-bottom: 5px;
+        }
+ 
+ 
+        @media (max-width: 880px) {
+ 
+        .footer-distributed{
+          font: bold 14px sans-serif;
+ 
+        }
+ 
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right{
+          display: block;
+          width: 100%;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+ 
+        .footer-distributed .footer-center i{
+          margin-left: 0;
+        }
+      }
+      .count{
+        position: absolute;
+        font-size: 20px;
+        color: white;
+        top:0px;
+        left:80px;
+        width: 15px;
+             }
+      .count h4{
+        
+        background-color: red;
+        line-height: 15px;
+        font-size: 19px;
+        color: white;
+        border-radius: 10px 10px;
+        border: 1px solid red;
+   
+      }
+  </style>
+</head>
+<body onload="filterSelection('1')" style="font-family:candara">
+  <script>
+    const showResults = (data) => {
+      let displayString = '';
+      if(data.length === 0){
+        displayString += `<li class="list-group-item">No results</li>`;
+      } else{
+        data.forEach(product => {
+          //console.log(product);
+          //console.log(product._id);
+          displayString += `<li class="row list-group-item">
+                              <span style=""><a href="/products/${product._id}"> ${product.name}</a></span> 
+                            </li>`;
+        });
+      }
+      $('#results-display').html(displayString);
+    }
+    const searchProduct = (e) => {
+      console.log(e.value);
+      if(e.value === ''){
+        $('#results-display').html(''); 
+      }else{
+        $("#results").html(e.value)
+        $.get(`/api/main/search?text=${e.value}`, (data, status) => {
+          showResults(data);
+        })
+      }
+    }
+  </script>
+ 
+ <div class="row"  >
+    <div class="col-sm-2">
+     <img src="/images/logo.jpg" id="logo">
+    </div>
+    <div class="col-sm-8">
+      <a href="/dashboard"><button type="button" class="btn btn-default" id="home" style="font-size: 20px;"><b>HOME</b></button></a>
+      <a href="/aboutus"><button type="button" class="btn btn-default" id="about" style="font-size: 20px;"><b>ABOUT US</b></button></a>
+      <a href="/services"><button type="button" class="btn btn-default" id="services" style="font-size: 20px;"><b>SERVICES</b></button></a>
+      <a href="/contactus"><button type="button" class="btn btn-default" id="contact" style="font-size: 20px;"><b>CONTACT US</b></button></a>
+      <a style="position: relative;" href="/chat"><button type="button" class="btn btn-default" id="services" style="font-size: 20px;"><b>MESSAGES <!--<span  class="count"><h4 id="count">0</h4></span>--></b></button></a>
+      <a href="/team"><button type="button" class="btn btn-default" id="meet" style="font-size: 20px;"><b>MEET THE TEAM</b></button></a>
+    </div>
+      <div class="col-sm-2">
+        <a href="/users/logout" class="ghost-button2" id="logout"><i class='fas fa-user-alt' style="font-size: 20px;">
+        </i><font style="font-size: 20px;">  Logout</font></a>
+        </div>
+    </div>
+ 
+ 
+ 
+<!----------------CAROUSEL--------------------------------------------------------------------------->
+<div id="car" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#car" data-slide-to="0" class="active"></li>
+    <li data-target="#car" data-slide-to="1"></li>
+    <li data-target="#dcar" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/car2.jpg" height="400">
+      <div class="carousel-caption">
+        <h3>Welcome to Jaljeevika</h3>
+        <p>WE ARE AT YOUR SERVICE</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="/images/car1.jpg" height="400">
+      <div class="carousel-caption">
+        <h3>Welcome to Jaljeevika</h3>
+        <p>WE ARE AT YOUR SERVICE</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="/images/car3.jpg" height="400"> 
+      <div class="carousel-caption">
+       <h3>Welcome to Jaljeevika</h3>
+        <p>WE ARE AT YOUR SERVICE</p>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#car" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#car" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<br>
+<!----------------------search bar---------------------------------------------->
+ 
+      <p id="space"></p>
+      <center></span><input class="form-control" oninput="searchProduct(this);" id="search-product"
+       style=" width: 900px;border-style:solid;border-color:rgb(40, 104, 187);border-width: 2px;height:55px" type="text"
+        placeholder="Search Products here... "/>
+     <ul class="list-group" id="results-display" style="width:380px"></ul></center>
+  <!--------------------------------------------------------------------------->
+<BR>
+ 
+  <!------------filter--------------------------------------------------------------------->
+  <div class="row">
+  <div style="width:25%">
+ 
+      <button type="button" class="btn btn-primary" id="filter" style="width:330px;">FILTER</button>
+        <ul class="list-group" id="filt_list" style="width:330px">
+        <form method="GET" action="/filter">
+ 
+        <br>
+        <!--------category-------------------->
+ 
+        <button type="button" class="btn btn-primary btn-sm" id="cat" style="width:330px">CATEGORY</button>
+        <div style="border-style:groove;width:330px">
+        <ul class="list-group" id="cat_list"style="width:330px">	
+          <% cats.forEach(cat=>{ %>
+           <div class="form-check" style="width:330px">
+          <input class="form-check-input" type="radio" name="category" id="Feed" value="<%=cat %>" >
+          <label class="form-check-label" for="Feed" style="width:330px">
+            <b><%=cat%> </b>
+           </label>
+        </div>
+        <%})%>
+ 
+        </ul></div>
+ 
+ 
+        <!--------company------------------------>
+ 
+        <button type="button" class="btn btn-primary btn-sm" id="compan" style="width:330px">COMPANY</button>
+        <div style="border-style:groove;width:330px">
+        <ul class="list-group" id="compan_list" style="width:330px">
+          <% brand.forEach(brand=>{ %>
+        <div class="form-check" style="width:330px">
+          <input class="form-check-input" type="radio" name="brand" id="BMR" value="<%=brand%>">
+          <label class="form-check-label" for="BMR" style="width:330px">
+            <font style="font-size: 16px;"><b> <%=brand%></b></font>
+          </label>
+        </div>
+        <%})%>
+ 
+ 
+ 
+        </ul></div>
+ 
+ 
+        <!---------------------price-------------------------->
+ 
+        <button type="button" class="btn btn-primary btn-sm" id="pri" style="width:330px">PRICE</button>
+        <div style="border-style:groove;width:330px">
+        <ul class="list-group" id="pri_list" style="width:330px">	
+           <div class="form-check" style="width:330px">
+          <input class="form-check-input" type="radio" name="price" id="less1000" value="low">
+ 
+          <label class="form-check-label" for="less1000" style="width:330px">
+            <b>Low To High</b>
+          </label>
+        </div>
+        <div class="form-check" style="width:330px">
+          <input class="form-check-input" type="radio" name="price" id="1000-2000" value="high">
+          <label class="form-check-label" for="1000-2000" style="width:330px">
+          <b>High To Low</b>
+          </label>
+        </div>
+ 
+ 
+        </ul></div>
+ 
+ 
+ 
+        <!------------location------------------->
+ 
+        <button type="button" class="btn btn-primary btn-sm" id="loc"style="width:330px">LOCATION</button>
+        <div style="border-style:groove;width:330px">
+        <ul class="list-group" id="location_list" style="width:330px">
+ 
+        <% for (const n in location){ %>
+        <div class="form-check" style="width:330px">
+          <input class="form-check-input" type="radio" name="vendorlocation" id="Jaipur" value=<%=location[n]%>>
+          <label class="form-check-label" for="Jaipur" style="width:330px">
+         <b> <%=location[n]%></b>
+          </label>
+        </div>
+          <%}%>
+ 
+ 
+ 
+        </ul></div>
+        <input type="submit" class="btn btn-primary btn-md"  name="" id="" style="width:330px">
+        <!------------------------------------------>
+        </form>
+        </ul>
+      </div>
+      <div  style="width: 75%; padding-left:1%; padding-right:2%;">
+        <div id="swipe">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+ 
+              <div class="swiper-slide">
+                  <div class="imgBx">
+                      <img src="/images/stonner.jpg">
+                  </div>
+                  <div class="details">
+                      <h3>STONNER<br><span>ABC</span></h3>
+                  </div>
+              </div>
+ 
+              <div class="swiper-slide">
+                  <div class="imgBx">
+                      <img src="\images\environ.jpg">
+                  </div>
+                  <div class="details">
+                      <h3>ENVIRON<br><span>XYZ</span></h3>
+                  </div>
+              </div>
+ 
+              <div class="swiper-slide">
+                  <div class="imgBx">
+                      <img src="\images\harvest1.jpg">
+                  </div>
+                  <div class="details">
+                      <h3>HARVEST 1<br><span>ABC</span></h3>
+                  </div>
+              </div>
+ 
+              <div class="swiper-slide">
+                  <div class="imgBx">
+                      <img src="/images/ewos-ultra.jpg">
+                  </div>
+                  <div class="details">
+                      <h3>EWOS ULTRA GROWER<br><span>XYZ</span></h3>
+                  </div>
+              </div>
+ 
+              <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="/images/pro.jpg">
+                </div>
+                <div class="details">
+                    <h3>PRO SENSE<br><span>XYZ</span></h3>
+                </div>
+              </div>
+ 
+              <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="/images/residental.jpg">
+                </div>
+                <div class="details">
+                    <h3>RESIDENTAL AQUARIUM<br><span>XYZ</span></h3>
+                </div>
+              </div>
+ 
+              <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="\images\harvest3s.jpg">
+                </div>
+                <div class="details">
+                    <h3>HARVEST 3s<br><span>ABC</span></h3>
+                </div>
+             </div>
+ 
+          </div>
+            <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <!-- Products -->
+    <div class="products">
+      <div class="row">
+        <% products.forEach(product => { %>
+          <div class="card--featured col-lg-3 col-sm-6 d-flex justify-content-center mt-4" onclick="javascript:location.href= '/products/<%= product._id %>'">
+            <div class="card shadow" style="width: 18rem;" onmouseover="hovered(this)" onmouseout="removed(this)">
+              <img src="<%= product.imgurl %>" style="width:100%"  id="p1">
+              <h4><center><%= product.name %></center></h4>
+              <center><%= product.vendorname %></center>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+      <!---------------footer------------->
+<footer class="footer-distributed">
+ 
+  <div class="footer-left">
+ 
+    <h3><span>Jaljeevika</span></h3>
+ 
+    <p class="footer-links">
+      <a href="/dashboard">Home</a>
+      ·
+      <a href="/aboutus">About Us</a>
+      ·
+      <a href="/services">Services</a>
+      ·
+      <a href="/contactus">Contact Us</a>
+      ·
+      <a href="/team">Meet the team</a>
+      ·
+      <a href="/users/logout">Logout</a>
+    </p>
+ 
+    <p class="footer-company-name">Jaljeevika &copy; 2020</p>
+  </div>
+ 
+  <div class="footer-center">
+ 
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>Jambhualkar Chowk,Wanowari</span> Pune,India</p>
+    </div>
+ 
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>411040</p>
+    </div>
+ 
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@company.com">info@jaljeevika.org</a></p>
+    </div>
+ 
+  </div>
+ 
+  <div class="footer-right">
+ 
+    <p class="footer-company-about">
+      <span>About the company</span>
+      Centre for Aquatic Livelihood Jaljeevika is addressing the issue of small-scale fish farmers, building community resilience and capacity to enhance livelihood opportunities using existing water bodies, technology and leveraging institutions.
+    </p>
+ 
+    <div class="footer-icons">
+ 
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-twitter-square"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+ 
+ 
+    </div>
+ 
+  </div>
+ 
+</footer>
+  <script>
+ 
+    $(document).ready(function(){
+        $("#comp").click(function(){
+        $("#comp_list").slideToggle("slow");
+        });
+    });
+ 
+ 
+ 
+    //For search bar filtering
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".dropdown-menu li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+        });
+        });
+ 
+    //For dropdown items selection
+    $(document).ready(function()
+        {
+        $(".dropdown-menu li").click(function()
+        {
+        var t=$(this).val();
+        $("#myInput").val($(this).text());
+        });
+        });
+ 
+ 
+ 
+    //JS CODE FOR PRODUCT FILTERING (MOST IMPORTANT)
+    filterSelection("allproduct")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "allproduct") c = "";
+        for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+    }
+ 
+    function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+    }
+ 
+    function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+        }
+        element.className = arr1.join(" ");
+    }
+    //until here
+    $(document).ready(function(){
+    $("#compan_list").hide();
+    });
+    $(document).ready(function(){
+    $("#location_list").hide();
+    });
+    $(document).ready(function(){
+    $("#pri_list").hide();
+    });
+    $(document).ready(function(){
+    $("#cat_list").hide();
+    });
+ 
+ 
+    $(document).ready(function(){
+  $("#compan").click(function(){
+    $("#compan_list").slideToggle("fast");
+  });
+});
+$(document).ready(function(){
+  $("#loc").click(function(){
+    $("#location_list").slideToggle("fast");
+  });
+});
+$(document).ready(function(){
+  $("#filter").click(function(){
+    $("#filt_list").slideToggle("fast");
+  });
+});
+$(document).ready(function(){
+  $("#cat").click(function(){
+    $("#cat_list").slideToggle("fast");
+  });
+});
+$(document).ready(function(){
+  $("#pri").click(function(){
+    $("#pri_list").slideToggle("fast");
+  });
+});
+function fade(obj,opacity) {
+$(obj).stop().fadeTo('fast', opacity);
+}
+//for featured products
+var textWrapper = document.querySelector('.ml1 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+ 
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml1 .letter',
+    scale: [0.3,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 600,
+    delay: (el, i) => 70 * (i+1)
+  }).add({
+    targets: '.ml1 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700,
+    offset: '-=875',
+    delay: (el, i, l) => 80 * (l - i)
+  }).add({
+    targets: '.ml1',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+<script type="text/javascript" src="/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 60,
+            stretch: 0,
+            depth: 500,
+            modifier: 1,
+            slideShadows : true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+    </script>
+    <script>
+      function getseen(){
+         $.ajax({
+           url: '/vendor/getunseen',
+           type: 'GET',
+           success: function(data){
+                     console.log(data)
+             $('#count').html(data)
+           }
+         });
+       }
+       setInterval(() => {
+         getseen()
+     }, 2000);
+     </script>
+</body>
+</html>

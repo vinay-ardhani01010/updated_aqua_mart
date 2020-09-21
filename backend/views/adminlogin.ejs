@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Admin Login</title>
+	<!-- Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Tool Sign In Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="/css/login.css" rel='stylesheet' type='text/css' />
+	<style>
+		.btdiv{
+			padding-top: 8px;
+		}
+		.bt{
+			float: left;
+			font-size: 18px;
+			border-radius: 5px;
+			border: 2px solid #00ba9d;
+			background-color: rgba(76, 175, 80, 0);
+			color: white;
+		}
+		.bt:hover {
+			background-color: #00ba9d; 
+			color: white;
+		  }
+	</style>
+</head>
+
+<body>
+	<div class="btdiv"><button class="bt">Main Page</button></div>
+	<h1>Welcome to Admin Login</h1>
+	<div class="ls-login box box--big">
+		<!-- form starts here -->
+		<%- include ("./partials/messages") %>
+				
+		<form action="/admin/login" method="POST">
+			<div class="agile-field-txt">
+				<label>Email</label>
+				<input type="text" name="email" id="email" placeholder="Enter User Name" required="" />
+			</div>
+			<div class="agile-field-txt">
+				<label> Password</label>
+				<input type="password" name="password" id="password" placeholder="Enter Password" required="" id="myInput" />
+				<div class="agile_label">
+					<input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
+					<label class="check" for="check3">Show password</label>
+                </div>
+                <div class="agile-right">
+					<a href="#">forgot password?</a>
+				</div>
+			</div>
+			<!-- script for show password -->
+			<script>
+				function myFunction() {
+					var x = document.getElementById("password");
+					if (x.type === "password") {
+						x.type = "text";
+					} else {
+						x.type = "password";
+					}
+				}
+			</script>
+			<!-- //end script -->
+			<div class="w3ls-bot">
+				<div class="switch-agileits">
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider round"></span>
+						keep me signed in
+					</label>
+				</div>
+			</div>
+				<input type="submit" value="SIGN IN">
+		</form>
+		
+	</div>
+</body>
+</html>
