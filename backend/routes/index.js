@@ -6,8 +6,17 @@ const isAdmin = require('../middleware/is-admin');
 const apiMain = require('./api-main');
 let Product = require('../models/product.model');
 const path = require('path');
+const app = express()
 
 // Welcome Page
+app.get('/update',(req, res) => {
+  Product.findById(req.params.id, (err, product)=>{
+      res.render('updateProduct.ejs',{
+          title: 'Edit Product',
+          product:product
+      });
+  });
+});
 router.get('/', (req, res) => res.render('logreg'));
 
 // User Dashboard
@@ -36,9 +45,25 @@ router.route('/dashboard').get(isUser,(req, res) => {
     }); 
   });
 });
-router.route('/products',(req,res)=>{
-  res.render('productview.ejs')
-})
+router.route('/products').get(isUser,(req, res) => { 
+  Product.find({}, function(err, data){
+    Product.find().distinct('category', function(error, category) {
+      Product.find().distinct('brand', function(error, brand) {
+        Product.find().distinct('vendorlocation', function(error, location) {
+        
+          res.render('productview.ejs', {
+            products : data,
+            brand : brand,
+            cats : category,
+            location : location,
+            feature : data.slice(0,3),
+         });
+        });
+      });
+    }); 
+  });
+});
+
 
 // Admin Dashboard
 router.route('/admindashboard').get(isUser,(req, res) => { 
