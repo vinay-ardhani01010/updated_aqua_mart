@@ -36,6 +36,9 @@ router.route('/dashboard').get(isUser,(req, res) => {
     }); 
   });
 });
+router.route('/products',(req,res)=>{
+  res.render('productview.ejs')
+})
 
 // Admin Dashboard
 router.route('/admindashboard').get(isUser,(req, res) => { 

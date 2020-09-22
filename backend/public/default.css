@@ -39,9 +39,7 @@ p
 	line-height: 180%;
 }
 
-strong
-{
-}
+
 
 a
 {
@@ -319,13 +317,7 @@ ul.contact li a.icon-rss:before
 	color: #FFF;
 }
 
-.button:hover
-{
-}
 
-.button:active
-{
-}
 
 .button-big
 {
@@ -451,9 +443,6 @@ ul.contact li a.icon-rss:before
 	color: #212121;
 }
 
-#menu li:hover a, #menu li.active a, #menu li.active span
-{
-}
 
 #menu li.current_page_item a
 {
@@ -461,9 +450,6 @@ ul.contact li a.icon-rss:before
 	color: #FFF !important;
 }
 
-#menu .icon
-{
-}
 
 /*********************************************************************************/
 /* Banner                                                                        */
@@ -723,13 +709,7 @@ ul.contact li a.icon-rss:before
 	position: relative;
 }
 
-#slider .button
-{
-}
 
-#slider .button:hover
-{
-}
 
 #slider .viewer
 {
