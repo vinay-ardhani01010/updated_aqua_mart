@@ -9,14 +9,7 @@ const path = require('path');
 const app = express()
 
 // Welcome Page
-app.get('/update',(req, res) => {
-  Product.findById(req.params.id, (err, product)=>{
-      res.render('updateProduct.ejs',{
-          title: 'Edit Product',
-          product:product
-      });
-  });
-});
+
 router.get('/', (req, res) => res.render('logreg'));
 
 // User Dashboard
