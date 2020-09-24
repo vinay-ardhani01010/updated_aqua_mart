@@ -13,6 +13,7 @@ exports.getProduct = (req, res, next) => {
             brand: product.brand,
             vendorlocation: product.vendorlocation,
             vendorid : product.vendorid,
+            id:product._id,
             path: '/products'
         })
       })

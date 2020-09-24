@@ -297,7 +297,7 @@
       }
       $('#results-display').html(displayString);
     }
-    const searchProduct = (e) => {
+    const searchProductBytext = (e) => {
       console.log(e.value);
       if(e.value === ''){
         $('#results-display').html(''); 
@@ -309,32 +309,8 @@
       }
     }
     //product by location
-    const searchProductByLocation = (e) => {
-      console.log(e.value);
-      if(e.value === ''){
-        $('#results-display-location').html(''); 
-      }else{
-        $("#results").html(e.value)
-        $.get(`/api/main/search?location=${e.value}`, (data, status) => {
-          showResultsBylocation(data);
-        })
-      }
-    }
-    const showResultsBylocation = (data) => {
-      let displayString = '';
-      if(data.length === 0){
-        displayString += `<li class="list-group-item">No results</li>`;
-      } else{
-        data.forEach(product => {
-          //console.log(product);
-          //console.log(product._id);
-          displayString += `<li class="row list-group-item">
-                              <span style=""><a href="/products/${product._id}"> ${product.name}</a></span> 
-                            </li>`;
-        });
-      }
-      $('#results-display-location').html(displayString);
-    }
+    
+   
     
   </script>
 <div class="container">
@@ -420,16 +396,12 @@
    </div>
    <div class = 'col mt-2'>
     <p id="space"></p>
-      <center></span><input class="form-control" oninput="searchProduct(this);" id="search-product"
+      <center></span><input class="form-control" oninput="searchProductBytext(this);" id="search-product"
        style=" width: 900px;border-style:solid;border-color:rgb(40, 104, 187);border-width: 2px;height:55px" type="text"
-        placeholder="Search Products here... "/>
+        placeholder="Search Products By location, Vendorname, Product name  "/>
      <ul class="list-group" id="results-display" style="width:380px"></ul></center>
      <div>
-      <p id="space"></p>
-        <center></span><input class="form-control" oninput="searchProductByLocation(this);" id="search-product-location"
-         style=" width: 900px;border-style:solid;border-color:rgb(40, 104, 187);border-width: 2px;height:55px" type="text"
-          placeholder="Search by location "/>
-       <ul class="list-group" id="results-display-location" style="width:380px"></ul></center>
+      
      </div>
      <div id='product-view'>
       <div class="products">
